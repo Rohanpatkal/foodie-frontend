@@ -75,17 +75,16 @@ export const Navbar: React.FC = () => {
             )}
 
             {isAdmin && (
-              <Link
-                href="/admin"
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                  pathname.startsWith('/admin')
-                    ? 'text-purple-600 bg-purple-50'
-                    : 'text-purple-700/80 hover:text-purple-900 hover:bg-purple-50/70'
-                }`}
+              <a
+                href="http://localhost:4200"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-purple-700 bg-purple-50 hover:bg-purple-100 transition-colors"
+                title="Open Dedicated Admin Portal"
               >
                 <ShieldAlert className="w-4 h-4 text-purple-600" />
-                Admin Panel
-              </Link>
+                Admin Portal ↗
+              </a>
             )}
           </nav>
 
@@ -237,18 +236,16 @@ export const Navbar: React.FC = () => {
             )}
 
             {isAdmin && (
-              <Link
-                href="/admin"
+              <a
+                href="http://localhost:4200"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center gap-2 px-3 py-2.5 rounded-xl font-medium text-sm ${
-                  pathname.startsWith('/admin')
-                    ? 'bg-purple-50 text-purple-700 font-bold'
-                    : 'text-purple-700 hover:bg-purple-50'
-                }`}
+                className="flex items-center gap-2 px-3 py-2.5 rounded-xl font-medium text-sm bg-purple-50 text-purple-700"
               >
                 <ShieldAlert className="w-4 h-4 text-purple-600" />
-                Admin Panel
-              </Link>
+                Admin Portal ↗
+              </a>
             )}
           </div>
 
